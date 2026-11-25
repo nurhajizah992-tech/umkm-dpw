@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dapur Pandan - Katalog</title>
+  <meta name="description" content="Daftar kue, harga, dan form pemesanan Dapur Pandan.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Lewati ke konten utama</a>
+  <header>
+    <div class="bar">
+      <p class="logo">Dapur Pandan</p>
+      <nav aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="katalog.html" aria-current="page">Katalog</a>
+        <a href="katalog.html#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Katalog kue</h1>
+    <p>Semua kue dibuat segar. Pemesanan minimal satu hari sebelumnya.</p>
+
+    <section aria-labelledby="produk">
+      <h2 id="produk">Daftar produk</h2>
+      <div class="grid">
+        <article>
+          <img src="images/kue_lapis.jpg" alt="Kue lapis hijau dan putih tersusun berlapis" width="600" height="400">
+          <h3>Kue Lapis</h3>
+          <p>Kue kukus kenyal dengan lapisan pandan dan santan.</p>
+          <p class="harga">Rp 3.000 / buah</p>
+        </article>
+        <article>
+          <img src="images/klepon.jpg
+          " alt="Klepon, bola ketan hijau bertabur kelapa parut" width="600" height="400">
+          <h3>Klepon</h3>
+          <p>Bola ketan isi gula merah cair, digulung kelapa.</p>
+          <p class="harga">Rp 2.500 / buah</p>
+        </article>
+        <article>
+          <img src="images/dadar-gulung.jpg" alt="Dadar gulung, kulit crepe hijau berisi kelapa manis" width="600" height="400">
+          <h3>Dadar Gulung</h3>
+          <p>Kulit crepe pandan berisi kelapa dan gula merah.</p>
+          <p class="harga">Rp 3.500 / buah</p>
+        </article>
+        <article>
+          <img src="images/onde-onde.jpeg" alt="Onde-onde, bola goreng bertabur wijen" width="600" height="400">
+          <h3>Onde-onde</h3>
+          <p>Bola goreng bertabur wijen, isi kacang hijau.</p>
+          <p class="harga">Rp 3.000 / buah</p>
+        </article>
+        <article>
+          <img src="images/bolu-pandan.jpg" alt="Bolu pandan berbentuk cincin hijau,sebagian sudah dipotong" width="600" height="400">
+          <h3>Bolu Pandan</h3>
+          <p>Bolu lembut beraroma pandan.</p>
+          <p class="harga">Rp 4.000 / potong</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="tabel-harga">
+      <h2 id="tabel-harga">Tabel harga dan paket</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Harga satuan dan harga paket 10 buah</caption>
+          <thead>
+            <tr>
+              <th scope="col">Produk</th>
+              <th scope="col">Harga satuan</th>
+              <th scope="col">Paket 10 buah</th>
+              <th scope="col">Tahan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Kue Lapis</th><td>Rp 3.000</td><td>Rp 28.000</td><td>1 hari</td></tr>
+            <tr><th scope="row">Klepon</th><td>Rp 2.500</td><td>Rp 23.000</td><td>1 hari</td></tr>
+            <tr><th scope="row">Dadar Gulung</th><td>Rp 3.500</td><td>Rp 32.000</td><td>2 hari</td></tr>
+            <tr><th scope="row">Onde-onde</th><td>Rp 3.000</td><td>Rp 28.000</td><td>2 hari</td></tr>
+            <tr><th scope="row">Bolu Pandan</th><td>Rp 4.000</td><td>Rp 37.000</td><td>3 hari</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="kontak">
+      <h2 id="kontak">Pesan atau hubungi kami</h2>
+      <p>Kolom bertanda * wajib diisi.</p>
+      <form action="#" method="post">
+        <div class="field">
+          <label for="nama">Nama lengkap *</label>
+          <input type="text" id="nama" name="nama" required minlength="3" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="telp">Nomor telepon</label>
+          <input type="tel" id="telp" name="telp" pattern="[0-9]{10,13}" inputmode="numeric" autocomplete="tel" aria-describedby="telp-hint">
+          <p class="hint" id="telp-hint">Hanya angka, 10 sampai 13 digit.</p>
+        </div>
+        <div class="field">
+          <label for="produk-pilihan">Produk yang diminati</label>
+          <select id="produk-pilihan" name="produk">
+            <option value="">Pilih produk</option>
+            <option>Kue Lapis</option>
+            <option>Klepon</option>
+            <option>Dadar Gulung</option>
+            <option>Onde-onde</option>
+            <option>Bolu Pandan</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pesan">Pesan *</label>
+          <textarea id="pesan" name="pesan" rows="5" required minlength="10"></textarea>
+        </div>
+        <button type="submit" class="button">Kirim pesan</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; toko kue zijah.</p>
+    <p>Alamat: Jl. aur.duri No. 12, ketapang</p>
+  </footer>
+</body>
+</html>
